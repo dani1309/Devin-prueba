@@ -1,0 +1,144 @@
+.history {
+  display: flex;
+  flex-direction: column;
+  /* Ocupa la misma altura que la calculadora sin crecer con el contenido. */
+  height: 0;
+  min-height: 100%;
+  padding: 1.25rem;
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition: background-color 0.25s ease;
+}
+
+.history__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.history__title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.history__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.history__empty {
+  margin: auto 0;
+  color: var(--text-muted);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.history__list {
+  flex: 1;
+  min-height: 0;
+  margin: 0 -0.5rem;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.history__item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0 0.25rem;
+  border-radius: 16px;
+  transition: background-color 0.15s ease;
+}
+
+.history__item:hover {
+  background: var(--surface-hover);
+}
+
+.history__select {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15rem;
+  min-width: 0;
+  padding: 0.7rem 0.5rem;
+  border: none;
+  border-radius: 14px;
+  background: transparent;
+  text-align: right;
+}
+
+.history__expression {
+  max-width: 100%;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.history__result {
+  max-width: 100%;
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.history__delete {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.history__delete:hover {
+  color: var(--danger);
+}
+
+.history-toggle,
+.history__close,
+.history-backdrop {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .history-toggle,
+  .history__close {
+    display: inline-flex;
+  }
+
+  .history-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background: rgba(5, 7, 12, 0.45);
+  }
+
+  .history {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    height: auto;
+    min-height: 40dvh;
+    max-height: 80dvh;
+    padding-bottom: calc(1.25rem + env(safe-area-inset-bottom));
+    border-radius: 28px 28px 0 0;
+    transform: translateY(105%);
+    visibility: hidden;
+    transition:
+      transform 0.25s ease,
+      visibility 0.25s;
+  }
+
+  .history.is-open {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
