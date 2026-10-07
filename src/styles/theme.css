@@ -1,0 +1,84 @@
+:root {
+  color-scheme: light;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --transition-fast: 120ms ease;
+  --transition: 200ms ease;
+
+  --bg: #f4f6fb;
+  --bg-gradient: radial-gradient(circle at 10% 0%, #e0e7ff 0%, transparent 45%),
+    radial-gradient(circle at 90% 10%, #ede9fe 0%, transparent 40%);
+  --surface: #ffffff;
+  --surface-alt: #f1f3f9;
+  --surface-sunken: #e9ecf5;
+  --border: #e2e6f0;
+  --text: #171a26;
+  --text-muted: #646b82;
+  --text-faint: #9aa0b4;
+
+  --accent: #5b5bf0;
+  --accent-strong: #4646d8;
+  --accent-soft: #e7e7fe;
+  --accent-contrast: #ffffff;
+  --danger: #dc2f45;
+  --danger-soft: #fde8eb;
+  --warning-soft: #fff6db;
+  --warning-border: #f1d27a;
+  --warning-text: #6b5000;
+
+  --key-number: #ffffff;
+  --key-number-hover: #f2f4fa;
+  --key-operator: #e7e7fe;
+  --key-operator-text: #4141c9;
+  --key-function: #eef0f6;
+  --key-function-text: #3b4157;
+  --key-action: #fde8eb;
+  --key-action-text: #c42339;
+
+  --shadow-sm: 0 1px 2px rgba(23, 26, 38, 0.06);
+  --shadow-md: 0 8px 24px rgba(23, 26, 38, 0.08);
+  --shadow-lg: 0 20px 50px rgba(23, 26, 38, 0.12);
+  --focus-ring: 0 0 0 3px rgba(91, 91, 240, 0.45);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0f1117;
+  --bg-gradient: radial-gradient(circle at 10% 0%, rgba(91, 91, 240, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 90% 10%, rgba(139, 92, 246, 0.14) 0%, transparent 40%);
+  --surface: #181b25;
+  --surface-alt: #1f2330;
+  --surface-sunken: #12141c;
+  --border: #2a2f3e;
+  --text: #eceef6;
+  --text-muted: #a0a6bb;
+  --text-faint: #6c7288;
+
+  --accent: #7c7cff;
+  --accent-strong: #9b9bff;
+  --accent-soft: #272a4a;
+  --accent-contrast: #0f1117;
+  --danger: #ff6b7d;
+  --danger-soft: #3a1d25;
+  --warning-soft: #33290c;
+  --warning-border: #6b5414;
+  --warning-text: #f5d77a;
+
+  --key-number: #232735;
+  --key-number-hover: #2b3041;
+  --key-operator: #2b2d55;
+  --key-operator-text: #b1b1ff;
+  --key-function: #1d212d;
+  --key-function-text: #c9cde0;
+  --key-action: #3a1d25;
+  --key-action-text: #ff8b99;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.5);
+  --focus-ring: 0 0 0 3px rgba(124, 124, 255, 0.55);
+}
